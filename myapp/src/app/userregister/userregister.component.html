@@ -1,0 +1,26 @@
+<p>userregister works!</p>
+
+<form name="userForm" action="" method="POST">
+    <table>
+      <tr>
+        <td colspan="2"><h1>Register User</h1></td>
+        <td></td></tr>
+      <tr>
+        <td><label>Full Name</label></td>
+        <td><input type="text" name="fullname" [(ngModel)]="fullname" placeholder="Enter Full Name here ...."></td>
+      </tr>
+      <tr>
+        <td><label>Date of Birth</label></td>
+        <td><input type="text" name="dob" [(ngModel)]="dob" placeholder="Enter DOB here ...."></td>
+      </tr>
+      <tr>
+        <td><label>Address</label></td>
+        <td><textarea name="address" [(ngModel)]="address" placeholder="Enter Address here ...."></textarea></td>
+      </tr>
+      <tr>
+        <td align="center" colspan="4">
+          <button type="submit" value="Submit" (click)="saveUserData()">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
