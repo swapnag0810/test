@@ -13,16 +13,18 @@ export class UserregisterComponent {
   address: string = '';
   @Input()
   userData!: User;
+  holidaysList: any;
 
   constructor(private restAPIService: RESTAPIService) { }
 
   ngOnInit(): void {
+    this.getHolidays();
   }
 
   saveUserData() {
     //debugger;
     let userData = {      
-      fullname: this.fullname,    
+      name: this.fullname,    
         dob: this.dob,     
          address: this.address    };
       //console.log(this.userData);
@@ -30,6 +32,13 @@ export class UserregisterComponent {
       error: (err) => { console.error(err) },
       complete: () => {  }
       //this.router.navigate(['products'])
+    });
+  }
+
+  getHolidays()
+  {
+    this.restAPIService.getHolidays().subscribe((data: any) => {
+      this.holidaysList = data;
     });
   }
 }

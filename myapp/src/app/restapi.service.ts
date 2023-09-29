@@ -16,7 +16,7 @@ export class RESTAPIService {
   };
   
   addUser(user: any) {
-    return this.http.post(this.url+"adduser", user, this.httpOptions);
+    return this.http.post(this.url+"api/User/AddUser", user, this.httpOptions);
   }
 
   getProducts() {
@@ -25,5 +25,9 @@ export class RESTAPIService {
 
   addProduct(product: any) {
     return this.http.post(this.url+"addproduct", product, this.httpOptions);
+  }
+
+  getHolidays(){
+    return this.http.get(this.url+"api/Products/GetHolidays", this.httpOptions);
   }
 }
