@@ -20,6 +20,7 @@ export class ProductsComponent {
     let products:Product[];
     this.restAPI.getProducts().subscribe((data: any) => {
       this.products = data;
+      localStorage.setItem('name','swapna');
     });
     //this.products=this.productService.getProducts();
 
