@@ -13,8 +13,9 @@
         <tbody>
             <tr *ngFor="let product of products;">
                 <td>{{product.productID}}</td>
-                <td><a>{{product.name}} </a> </td><!--[routerLink]="['detail',product.productID]"-->
+                <td><a>{{product.name| uppercase}} </a> </td><!--[routerLink]="['detail',product.productID]"-->
                 <td>{{product.price}}</td>
+                <td>{{product.date | date: 'short' | lowercase}}</td>
             </tr>
         </tbody>
     </table>

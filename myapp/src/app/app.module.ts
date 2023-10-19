@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { UserregisterComponent } from './userregister/userregister.component';
+import { TestuppercasepipePipe } from './testuppercasepipe.pipe';
+import { TestreversepipePipe } from './testreversepipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProductsComponent,
-    UserregisterComponent
+    UserregisterComponent,
+    TestuppercasepipePipe,
+    TestreversepipePipe
   ],
   imports: [
     BrowserModule,

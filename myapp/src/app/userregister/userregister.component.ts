@@ -19,6 +19,7 @@ export class UserregisterComponent {
   constructor(private restAPIService: RESTAPIService) { }
 
   ngOnInit(): void {
+    debugger;
     //try calling local storage
     alert(localStorage.getItem('name'));
     //try retriving data from third party
